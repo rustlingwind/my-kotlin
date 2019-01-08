@@ -4,12 +4,6 @@
  * @author Wang Liang
  * @since 8th/Jan/2019
  */
-fun main(args:Array<String>) {
-    printName1(args)
-    printName2(args)
-    printName3(args)
-}
-
 fun printName1(args: Array<String>) {
     val name = getName(args)
     println("Hello $name ! (1st)")
