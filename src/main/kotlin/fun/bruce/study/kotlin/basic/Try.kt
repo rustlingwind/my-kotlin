@@ -1,11 +1,14 @@
 package `fun`.bruce.study.kotlin.basic
 
+import java.lang.NumberFormatException
+
 
 class Animal(val name: String) {
     fun grow() {
         println("I am a $name, I have grown up.")
     }
 
+    // throws is not needed anymore in Kotlin
     fun fly() {
         when (name) {
             "Bird","Bat" -> println("I am a $name, I can fly.")
@@ -20,6 +23,7 @@ class Animal(val name: String) {
 }
 
 fun main(args:Array<String>) {
+    // try..catch..finally
     var animal: Animal? = null
     try {
         animal = Animal("Bird")
@@ -39,4 +43,12 @@ fun main(args:Array<String>) {
         animal?.die()
     }
 
+    // use try as an expression
+    val num = try {
+        Integer.parseInt("666s")
+    }catch (e: NumberFormatException) {
+        null
+    }
+
+    println("num: $num")  // will output "num: null"
 }
