@@ -17,6 +17,14 @@ fun <T> joinToString(
     return result.toString()
 }
 
+//fun toList<T>(vararg values: T) : Array<T> {
+//    return listOf(values)
+//}
+
+
 fun main(args: Array<String>) {
     println(joinToString(listOf(1,2,3)))
+
+//    println(toList(1,2,3))
+
 }
